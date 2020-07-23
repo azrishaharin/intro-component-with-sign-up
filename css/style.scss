@@ -1,0 +1,135 @@
+$primary-color: #ff8080;
+$secondary-color: #38cc8c;
+$accent-color: #6055a5;
+$neutral-color1: #3e3c49;
+$neutral-color2: #b9b6d3;
+$breakpoint-mobile: 768px;
+$small-padding: 16px;
+$large-padding: 40px;
+$font-family: "Poppins", sans-serif;
+
+html {
+  min-height: 100%;
+}
+
+body {
+  min-height: 100vh;
+}
+
+.main-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  background: url("../../images/bg-intro-desktop.png"), $primary-color;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+}
+
+.first-column {
+  color: white;
+  font-family: $font-family;
+
+  h1 {
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 1.1;
+    margin-bottom: 24px;
+  }
+
+  h5 {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.5;
+  }
+}
+
+.second-column {
+  .info-card {
+    font-family: $font-family;
+    font-size: 14px;
+    font-weight: 400;
+    color: white;
+    padding: 16px 0px;
+    background-color: $accent-color;
+    box-shadow: 0px 5px 0px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    margin-bottom: 24px;
+    text-align: center;
+  }
+
+  .card-shadow {
+    border-radius: 8px !important;
+    box-shadow: 0px 5px 0px rgba(0, 0, 0, 0.1);
+  }
+}
+
+.terms {
+  margin-top: 16px;
+  font-size: 10px;
+  text-align: center;
+
+  .terms-child {
+    color: $primary-color;
+  }
+}
+
+.button-color {
+  color: white !important;
+  background-color: $secondary-color !important;
+  box-shadow: 0px 3px 0px rgba(0, 0, 0, 0.25);
+}
+
+@media screen and (min-width: 400px) {
+  .first-column {
+    width: 70%;
+  }
+  .second-column {
+    width: 80%;
+  }
+}
+
+@media (max-width: $breakpoint-mobile) {
+  .main-container {
+    background: url("../../images/bg-intro-mobile.png"), $primary-color;
+  }
+
+  .row {
+    flex-direction: column;
+  }
+
+  .first-column {
+    width: 100%;
+    padding: 0px 24px;
+    text-align: center;
+    margin-bottom: 40px;
+
+    h1 {
+      font-size: 24px;
+    }
+
+    h5 {
+      font-size: 12px;
+      line-height: 1.5;
+    }
+  }
+
+  .second-column {
+    width: 100%;
+    padding: 0px 24px;
+  }
+}
